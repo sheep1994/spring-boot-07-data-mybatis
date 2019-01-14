@@ -32,6 +32,7 @@ spring:
     useGlobalDataSourceStat: true
     # 通过connectionProperties属性打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+#    配置启动项目就可以执行建表语句的配置项
 #    schema:
 #      - classpath:sql/department.sql
 #      - classpath:sql/employee.sql
