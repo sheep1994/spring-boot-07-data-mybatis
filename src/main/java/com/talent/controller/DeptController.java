@@ -1,5 +1,6 @@
 package com.talent.controller;
 
+import com.talent.exception.UserException;
 import com.talent.mapper.DepartmentMapper;
 import com.talent.mapper.EmployeeMapper;
 import com.talent.model.Department;
@@ -46,5 +47,14 @@ public class DeptController {
     public Employee insertEmp(Employee emp) {
         employeeMapper.insertEmp(emp);
         return emp;
+    }
+
+
+    @GetMapping("/hello")
+    public String hello(String name) {
+        if ("aaa".equals(name)) {
+            throw new UserException("用户不存在");
+        }
+        return null;
     }
 }
